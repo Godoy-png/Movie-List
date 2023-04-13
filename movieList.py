@@ -6,7 +6,7 @@ def movie_list(title):
     for i in range(1, 101):
         try:
             print('Pesquisando em pagina:', i)
-            url = 'http://www.omdbapi.com/?apikey=8e3d0f3b&s=' + title + '&type=movie&page=' + str(i)
+            url = 'http://www.omdbapi.com/?apikey=yourKey' + title + '&type=movie&page=' + str(i)
             req = requests.get(url)
             response = json.loads(req.text)
             if response['Response'] == 'True':
